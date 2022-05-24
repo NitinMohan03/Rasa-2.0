@@ -6,14 +6,12 @@ intents:
 - self_employed
 - nlu_fallback
 - gender
-- mood_happy
 - greet
 - name_entry
 - goodbye
 - affirm
 - deny
 - bot_challenge
-- mood_unhappy
 - mood_angry
 - mood_scared
 - mood_nervous
@@ -228,10 +226,8 @@ responses:
   utter_iamabot:
   - text: I am a bot, powered by Rasa.
 
-  utter_survey:
-  - text: Do you have 5 mins to spare?
   utter_ask_confirm_survey:
-  - text: Care to fill a short survey?
+  - text: Are you willing to give anxiety survey ?
     buttons:
     - title: Yes
       payload: 'Yes'
@@ -239,9 +235,9 @@ responses:
       payload: 'No'
   
   utter_ask_confirm_mhsurvey:
-  - text: Would you like to go on a quick mental health situation analysis survey with me? Dont worry, all your responses will be safe between just us!
+  - text: Are you sure you would like to go on a quick mental health situation analysis survey with me? Dont worry, all your responses will be safe between just us!
   utter_ask_continue:
-  - text: "Sorry, I don't quite understand. Do you want to continue?"
+  - text: "Sorry, I dont quite understand. Do you want to continue?"
 
   # utter_ask_name:
   # - text: What's your name?
@@ -480,8 +476,8 @@ responses:
       payload: Yes
     - title: No
       payload: No
-    - title: I don't know
-      payload: I don't know
+    - title: I dont know
+      payload: I dont know
 
   utter_ask_mh_employer_discussion:
   - text: Has your employer ever formally discussed mental health (for example, as part of a wellness campaign or other official communication)?
@@ -498,8 +494,8 @@ responses:
       payload: Yes
     - title: No
       payload: No
-    - title: I don't know
-      payload: I don't know
+    - title: I dont know
+      payload: I dont know
 
   utter_ask_mh_anonimity_flag:
   - text: Is your anonymity protected if you choose to take advantage of mental health or substance abuse treatment resources provided by your employer?
@@ -508,8 +504,8 @@ responses:
       payload: Yes
     - title: No
       payload: No
-    - title: I don't know
-      payload: I don't know
+    - title: I dont know
+      payload: I dont know
 
   utter_ask_mh_medical_leave:
   - text: If a mental health issue prompted you to request a medical leave from work, asking for that leave would be
@@ -563,8 +559,8 @@ responses:
     buttons:
     - title: Yes, I think it would
       payload: Yes, I think it would
-    - title: No, I don't think it would
-      payload: No, I don't think it would
+    - title: No, I dont think it would
+      payload: No, I dont think it would
     - title: Maybe
       payload: Maybe 
 
@@ -573,8 +569,8 @@ responses:
     buttons:
     - title: Yes, I think it would
       payload: Yes, I think it would
-    - title: No, I don't think it would
-      payload: No, I don't think it would
+    - title: No, I dont think it would
+      payload: No, I dont think it would
     - title: Maybe
       payload: Maybe 
 
@@ -595,8 +591,8 @@ responses:
       payload: Yes
     - title: No
       payload: No
-    - title: I don't know
-      payload: I don't know
+    - title: I dont know
+      payload: I dont know
 
   utter_ask_mh_disorder_past:
   - text: Have you had a mental health disorder in the past?
@@ -641,8 +637,8 @@ responses:
       payload: Rarely
     - title: Sometimes
       payload: Sometimes
-    - title: Often
-      payload: Often
+    - title:  Often
+      payload:  Often
     - title: Not applicable to me
       payload: Not applicable to me
 
@@ -688,9 +684,8 @@ responses:
     - title: Never
       payload: Never
 
-
   utter_submit:
-  - text: Ok. Thank you {name}
+  - text: Thank you. Have a nice day!!
 
 
   utter_agent.acquaintance:
@@ -708,7 +703,7 @@ responses:
   utter_agent.annoying:
   - text: "I'll do my best not to annoy you in the future."
   - text: "I'll try not to annoy you."
-  - text: "I don't mean to. I'll ask my developers to make me less annoying."
+  - text: "I dont mean to. I'll ask my developers to make me less annoying."
   - text: "I didn't mean to. I'll do my best to stop that."
 
   utter_agent.answer_my_question:
@@ -732,11 +727,11 @@ responses:
   utter_agent.birth_date:
   - text: "Wait, are you planning a party for me? It's today! My birthday is today!"
   - text: "I'm young. I'm not sure of my birth date."
-  - text: "I don't know my birth date. Most virtual agents are young, though, like me."
+  - text: "I dont know my birth date. Most virtual agents are young, though, like me."
 
   utter_agent.boring:
   - text: "I'm sorry. I'll request to be made more charming."
-  - text: "I don't mean to be. I'll ask my developers to work on making me more amusing."
+  - text: "I dont mean to be. I'll ask my developers to work on making me more amusing."
   - text: "I can let my developers know so they can make me fun."
 
   utter_agent.boss:
@@ -1152,13 +1147,38 @@ forms:
         value: true
       - type: from_intent
         intent: deny
-        value: False     
-    name:
+        value: False
+    feel_down:
       - type: from_text
-
-    gender:
+    litte_interest:
       - type: from_text
-    self_emp:
+    bother_sleep:
+      - type: from_text
+    bother_tired:
+      - type: from_text
+    bother_apetite:
+      - type: from_text
+    bother_feelingbad:
+      - type: from_text
+    bother_concentrate:
+      - type: from_text
+    bother_moving:
+      - type: from_text
+    bother_anxiety:
+      - type: from_text
+    bother_nervous:
+      - type: from_text
+    bother_worry:
+      - type: from_text
+    bother_worry_things:
+      - type: from_text
+    bother_relax:
+      - type: from_text
+    bother_restless:
+      - type: from_text
+    bother_annoy:
+      - type: from_text
+    bother_afraid:
       - type: from_text
 
   mh_survey:

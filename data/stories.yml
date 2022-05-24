@@ -7,7 +7,7 @@ stories:
   steps:
   - intent: greet
   - action: utter_greet
-  - intent: mood_happy
+  - intent: user.happy
   - action: mh_survey
   - active_loop: mh_survey
 
@@ -15,7 +15,7 @@ stories:
   steps:
   - intent: greet
   - action: utter_greet
-  - intent: mood_unhappy
+  - intent: user.sad
   - action: survey_form
   - active_loop: survey_form
 
@@ -23,7 +23,7 @@ stories:
   steps:
   - intent: greet
   - action: utter_greet
-  - intent: mood_happy
+  - intent: user.happy
   - action: mh_survey
   - active_loop: mh_survey
   - intent: out_of_scope
@@ -35,7 +35,7 @@ stories:
 
 - story: mh_survey continue
   steps:
-  - intent: mood_unhappy
+  - intent: user.happy
   - action: mh_survey
   - active_loop: mh_survey
   - intent: out_of_scope
@@ -47,7 +47,7 @@ stories:
   steps:
   - intent: greet
   - action: utter_greet
-  - intent: mood_unhappy
+  - intent: user.sad
   - action: survey_form
   - active_loop: survey_form
   - intent: out_of_scope
@@ -59,7 +59,7 @@ stories:
 
 - story: survey continue
   steps:
-  - intent: mood_unhappy
+  - intent: user.sad
   - action: survey_form
   - active_loop: survey_form
   - intent: out_of_scope
@@ -74,31 +74,11 @@ stories:
   - intent: deny
   - action: utter_goodbye
 
-- story: sad path 1
-  steps:
-  - intent: greet
-  - action: utter_greet
-  - intent: mood_unhappy
-  - action: utter_cheer_up
-  - action: utter_did_that_help
-  - intent: affirm
-  - action: utter_happy
-
-- story: sad path 2
-  steps:
-  - intent: greet
-  - action: utter_greet
-  - intent: mood_unhappy
-  - action: utter_cheer_up
-  - action: utter_did_that_help
-  - intent: deny
-  - action: utter_goodbye
-
-
 - story: story 01
   steps:
   - intent: agent.acquaintance
   - action: utter_agent.acquaintance
+  
 - story: story 02
   steps:
   - intent: agent.age

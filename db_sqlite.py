@@ -139,7 +139,7 @@ def insert_data3(feel_down,litte_interest,bother_sleep,bother_tired,bother_apeti
         conn = sqlite3.connect('depression.db') 
         cursor = conn.cursor()
     
-        insert = '''INSERT INTO short_survey(name,gender,self_emp) VALUES(?,?,?);'''
+        insert = '''INSERT INTO short_survey(feel_down,litte_interest,bother_sleep,bother_tired,bother_apetite,bother_feelingbad,bother_concentrate,bother_moving,bother_anxiety,bother_nervous,bother_worry,bother_worry_things,bother_relax,bother_restless,bother_annoy,bother_afraid) VALUES(?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?);'''
 
         data_tuple = (feel_down,litte_interest,bother_sleep,bother_tired,bother_apetite,bother_feelingbad,bother_concentrate,bother_moving,bother_anxiety,bother_nervous,bother_worry,bother_worry_things,bother_relax,bother_restless,bother_annoy,bother_afraid)
 
@@ -157,4 +157,4 @@ def insert_data3(feel_down,litte_interest,bother_sleep,bother_tired,bother_apeti
             print("The conn connection is closed\n")
 # insert_data('Nitin','21','Male','No')
 # create1()
-create3()
+# create3()

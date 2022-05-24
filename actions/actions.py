@@ -73,7 +73,7 @@ class ActionSubmitSurvey(Action):
             bother_restless = tracker.get_slot("bother_restless")
             bother_annoy = tracker.get_slot("bother_annoy")
             bother_afraid = tracker.get_slot("bother_afraid")
-            dispatcher.utter_message(text="Thank you so much for your time!")
+            # dispatcher.utter_message(text="Thank you so much for your time!")
             insert_data3(feel_down,litte_interest,bother_sleep,bother_tired,bother_apetite,bother_feelingbad,bother_concentrate,bother_moving,bother_anxiety,bother_nervous,bother_worry,bother_worry_things,bother_relax,bother_restless,bother_annoy,bother_afraid)	
             return []
 
@@ -133,6 +133,6 @@ class ActionSubmitMHSurvey(Action):
             remote_flag = tracker.get_slot("remote_flag")
 
 
-            dispatcher.utter_message(text="Thank you so much for your time!")
+            # dispatcher.utter_message(text="Thank you so much for your time!")
             insert_data2(self_empl_flag, tech_comp_flag, mh_coverage_flag, mh_employer_discussion, mh_resources_provided, mh_anonimity_flag, mh_medical_leave, mh_discussion_neg_impact, mh_discussion_cowork, mh_discussion_supervis, mh_conseq_coworkers, mh_hurt_on_career, mh_neg_view_cowork, mh_bad_response_workplace, mh_family_hist, mh_disorder_past, mh_disorder_current, mh_diagnos_proffesional, mh_sought_proffes_treatm, mh_eff_treat_impact_on_work, mh_not_eff_treat_impact_on_work, age, sex, country_live, live_us_teritory, country_work, work_us_teritory, work_position, remote_flag)	
             return []
